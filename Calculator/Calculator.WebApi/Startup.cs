@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Calculator.WebApi.Controllers;
+using Calculator.WebApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +29,8 @@ namespace Calculator.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpClient<CalculatorController>();
-            
+            services.AddHttpClient<GoogleAuthToken>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

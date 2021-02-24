@@ -9,6 +9,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
+      - ADD_API=http://addition-api
+      - SUB_API=http://subtraction-api
     links:
       - "addition-api"
       - "subtraction-api"
